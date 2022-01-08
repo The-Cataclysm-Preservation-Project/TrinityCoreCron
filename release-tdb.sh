@@ -171,8 +171,8 @@ git add sql
 # 14. dump world db to sql
 mkdir tdb
 cd tdb
-mysqldump -uroot world --default-character-set='utf8mb4' --result-file $NEW_TDB_WORLD_FILE.sql
-mysqldump -uroot hotfixes --default-character-set='utf8mb4' --result-file $NEW_TDB_HOTFIXES_FILE.sql
+mysqldump -uroot world --default-character-set='utf8mb4' --routines --result-file $NEW_TDB_WORLD_FILE.sql
+mysqldump -uroot hotfixes --default-character-set='utf8mb4' --routines --result-file $NEW_TDB_HOTFIXES_FILE.sql
 sed -i -e 's/DEFINER=[^*]*\*/\*/' $NEW_TDB_WORLD_FILE.sql
 sed -i -e 's/DEFINER=[^*]*\*/\*/' $NEW_TDB_HOTFIXES_FILE.sql
 
