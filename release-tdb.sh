@@ -45,7 +45,7 @@ cmake ../ -DWITH_WARNINGS=1 -DWITH_COREDEBUG=0 -DUSE_COREPCH=1 -DUSE_SCRIPTPCH=1
 c++ --version
 make -j 4 -k && make install
 cd check_install/bin
-./bnetserver --version
+./authserver --version
 ./worldserver --version
 cp ../etc/worldserver.conf.dist ../etc/worldserver.conf
 
